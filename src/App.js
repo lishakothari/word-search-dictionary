@@ -30,7 +30,9 @@ function App() {
   }, [word, language]);
 
   return (
-    <div className='App'>
+    <div 
+      className='App'>
+
         <Container className='Container' maxWidth="md">
           <Header 
             language={language} 
@@ -46,7 +48,7 @@ function App() {
             language={language}
             />
           )}
-          
+
         </Container>
     </div>
   );

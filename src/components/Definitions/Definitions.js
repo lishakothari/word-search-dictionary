@@ -1,7 +1,7 @@
 import React from 'react';
 import './Definitions.css';
 
-export const Definitions = ({ word, language, meanings }) => {
+export const Definitions = ({ word, meanings }) => {
   return (
     <div className='meanings'>
         {
