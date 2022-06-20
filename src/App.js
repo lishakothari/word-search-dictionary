@@ -2,6 +2,7 @@ import { Container } from '@mui/system';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Definitions } from './components/Definitions/Definitions';
 import { Header } from './components/Header/Header';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     }
   }
 
-  console.log(meanings);
+ // console.log(meanings);
 
   useEffect(() => {
     api();
@@ -31,7 +32,21 @@ function App() {
   return (
     <div className='App'>
         <Container className='Container' maxWidth="md">
-          <Header language={language} setLanguage={setLanguage} word={word} setWord={setWord}/>
+          <Header 
+            language={language} 
+            setLanguage={setLanguage} 
+            word={word} 
+            setWord={setWord}
+          />
+            
+          {meanings && (
+            <Definitions 
+            word={word}
+            meanings={meanings}
+            language={language}
+            />
+          )}
+          
         </Container>
     </div>
   );
